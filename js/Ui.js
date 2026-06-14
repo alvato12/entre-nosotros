@@ -38,16 +38,23 @@ window.showSection = function(id) {
   const sec = document.getElementById('section-' + id);
   if (sec) sec.classList.add('active');
   document.querySelectorAll('[data-section="' + id + '"]').forEach(n => n.classList.add('active'));
-  if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('mobile-open');
+  if (window.innerWidth <= 768) document.getElementById('sidebar')?.classList.remove('mobile-open');
   window.scrollTo(0,0);
 };
-document.querySelectorAll('.nav-item').forEach(item => {
-  item.addEventListener('click', () => window.showSection(item.dataset.section));
-});
 
 window.toggleSidebar = function() {
   document.getElementById('sidebar').classList.toggle('mobile-open');
 };
+
+// Attach nav listeners once DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => window.showSection(item.dataset.section));
+  });
+  document.querySelectorAll('.mobile-nav-item[data-section]').forEach(item => {
+    item.addEventListener('click', () => window.showSection(item.dataset.section));
+  });
+});
 
 // ══ MODALS ══
 window.openModal = function(id) {
@@ -62,8 +69,10 @@ window.openModal = function(id) {
 window.closeModal = function(id) {
   document.getElementById(id).classList.remove('open');
 };
-document.querySelectorAll('.modal-overlay').forEach(m => {
-  m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); });
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.modal-overlay').forEach(m => {
+    m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); });
+  });
 });
 
 // ══ TOAST ══
@@ -252,7 +261,7 @@ window.renderEvents = function() {
   });
 };
 
-window.renderCalendar();
+document.addEventListener("DOMContentLoaded", () => window.renderCalendar());
 
 // ══ WORDLE ══
 const WORDLE_WORDS = ['ARBOL','BANCO','CALLE','DATOS','FINCA','GLOSA','HUECO','IDEAL','JUEGO','LUGAR','MARCO','NOCHE','ORDEN','PLAZA','QUESO','RADIO','SALUD','AMIGO','BRISA','CAMPO','DICHA','FALSO','GRANO','HONDO','LIBRO','MUNDO','NUEVO','PRADO','RAZÓN','SABOR','TECHO','DULCE','ENTRE','GUSTO','HONOR','MUJER','OSCUR','PRIMO','ATAJO','CURVA'];
