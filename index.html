@@ -1897,7 +1897,7 @@
   <section class="section active" id="section-home">
     <div class="hero-eyebrow">✦ bienvenidos</div>
     <h2 class="hero-title">Esto queda<br><em>entre nosotros</em></h2>
-    <p class="hero-desc">Un lugar solo para nosotros. Fotos, cartas, música, recuerdos y todo lo que queramos guardar aquí.</p>
+    <p class="hero-desc">Un lugar hecho, por y para para nosotros. Fotos, cartas, música, recuerdos y todo lo que queramos guardar aquí, aquí se queda.</p>
     <div class="hero-cards">
       <div class="hero-card" onclick="showSection('gallery')">
         <div class="hero-card-icon">◈</div>
@@ -4239,7 +4239,7 @@ function initParticles() {
 // ── CHALLENGES DIARIOS ──
 const dailyChallenges = [
   'Mándate un selfie sonriendo ahora mismo 💕',
-  'Escribe 3 cosas que amas de la otra persona',
+  'Escribe 3 cosas que te encantan de la otra persona',
   'Envía una foto de tu comida favorita juntos',
   'Comparte tu canción favorita del momento',
   'Escribe un mensaje de buenos días cariñoso',
@@ -4247,9 +4247,14 @@ const dailyChallenges = [
   'Mándame un audio diciendo "te quiero"',
   'Comparte un meme que te haga reír',
   'Envía una foto de donde estás ahora',
-  'Escribe 5 palabras que describan a la pareja',
-  'Planifica nuestra próxima cita',
   'Comparte tu película favorita y por qué',
+  'Escribe una carta, da igual lo que ponga o lo larga que sea',
+  'Hazle una broma al otro (no vale que sea verblal)',
+  'Haz un reveal de algún objeto extraño de tu casa',
+  'Saca una foto a tu hermano sin que se de cuenta',
+  'Haz tu bebida favorita y envíala',
+  'Manda al otro la canción que estes escuchando (aquí para gustos, colores)',
+  'Aburrete, nada más, inténtelo, si te quedas dormido/a en el proceso, mejor',
   'Envía una foto de tu lucky object',
   'Dime qué superpoder tendrías para mí',
   'Escribe un poema corto de 4 líneas'
@@ -4262,21 +4267,21 @@ function showNewChallenge() {
 
 // ── GENERADOR DE PLANES ──
 const randomPlans = [
-  '🎬 Película en casa con palomitas',
-  '🚶 Paseo por el parque atardecer',
+  '🎬 Película en casa con palomitas (muchas)',
+  '🚶 Paseo por donde tu quieras para ver el atardecer',
   '🍕 Cena pizza y series',
-  '☕ Café y charla en tu lugar favorito',
+  '☕ Té y charla en tu lugar favorito',
   '🎮 Noche de videojuegos',
   '🍳 Cocinar algo nuevo juntos',
-  '📚 Leer un capítulo juntos',
-  '🎵 Karaoke en casa',
-  '🏞️ Excursión a la naturaleza',
+  '📚 Leer un capítulo de cualquier libro juntos',
+  '🏞️ Excursión por la sierra',
   '🎨 Pintar o dibujar juntos',
-  '🏃 Exercise date',
+  '🏃 Hacemos ejercicio?',
   '🧘 Meditación juntos',
-  '🌙 Noche de estrellas',
-  '💃 Bailar música en casa',
-  '🍷 Degustación de vinos'
+  '🌙 Noche de estrellas (aqui hay que llamar a Lorca)',
+  '💃 Bailar música en casa (de alguna forma tengo que aprender)',
+  '📺 Buscar películas para ver alguna vez (nunca las veremos)',
+  '🍷 Probar recetas de tik tok rapidas'
 ];
 
 function generateRandomPlan() {
@@ -4287,11 +4292,15 @@ function generateRandomPlan() {
 
 // ── SORPRESAS ──
 const surpriseMessages = [
-  { icon: '💕', title: 'Te quiero', message: 'Solo quería recordarte lo especial que eres para mí.' },
-  { icon: '🌟', title: 'Eres increíble', message: 'Cada día a tu lado es un regalo.' },
-  { icon: '🎁', title: 'Sorpresa', message: 'Me encantas exactamente como eres.' },
+  { icon: '💕', title: 'Te amo', message: 'Solo quería recordarte lo especial que eres para mí.' },
+  { icon: '🍊', title: 'Nanananja', message: 'Animae dimidium meae.' },
+  { icon: '✨', title: 'Aquí estás tu', message: 'Per aspera ad astra.' },
+  { icon: '🌟', title: 'Eres increíble', message: 'Cada día a tu lado me llena de alegría.' },
+  { icon: '🎁', title: 'Sorpresa', message: 'Me encantas ,no podría pensar en nadie mejor.' },
   { icon: '💖', title: 'Amor', message: 'Eres la mejor cosa que me ha pasado.' },
   { icon: '✨', title: 'Brillas', message: 'Tu alegría ilumina mis días.' },
+  { icon: '❤', title: 'Nombres', message: 'Cuando lo escucho, simplemente soy feliz.' },
+  { icon: '📚', title: 'Poesía', message: 'Cada una de tus palabras me resultan mágicas.' },
   { icon: '🌈', title: 'Color', message: 'Le pusiste color a mi vida.' }
 ];
 
